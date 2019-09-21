@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function calculate(a, b, opperation) {
+
+            var a = +prompt("Введите первое число.", "10");
+            var opperation = prompt("Выберите арифметическое действие +, -, *, /", "+");
+            var b = +prompt("Выберите второе число.", "5");
+            var result;
+
+            while (!isNaN(a) || !isNaN(b)) {
+
+                if (opperation == "+") {
+                    result = a + b;
+                    alert(result);
+                } else if (opperation == "-") {
+                    result = a - b;
+                    alert(result);
+                } else if (opperation == "*") {
+                    result = a * b;
+                    alert(result);
+                } else if (opperation == "/") {
+                    if (a != 0 && b != 0) {
+                        result = a / b;
+                        alert(result);
+                    } else {
+                        alert("Числа на 0 не делятся!");
+
+                    };
+                };
+                break;
+            };
+            return result;
+        };
+        alert(calculate());
+
+    </script>
+</body>
+
+</html>
