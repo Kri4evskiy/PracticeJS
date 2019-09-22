@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function calculate(obj1, obj2, operation) {
+            var obj1 = { a: 15, b: 20 };
+            var obj2 = { a: 3, b: 5 };
+            var operation = prompt("Выберите арифметическое действие +, -, *, /", "+");
+            var result = {};
+
+            while (typeof obj1 == "object" && typeof obj2 == "object") {
+
+                if (operation == "+") {
+                    result.A = obj1["a"] + obj2["a"];
+                    result.B = obj1["b"] + obj2["b"];
+                    alert("Сложение значений объектов А = " + result.A + "   " + "Сложение значений объектов B = " + result.B);
+                    result = result.A + result.B;
+                } else if (operation == "-") {
+                    result.A = obj1["a"] - obj2["a"];
+                    result.B = obj1["b"] - obj2["b"];
+                    alert("Вычетание значений объектов А = " + result.A + "   " + "Вычетание значений объектов B = " + result.B);
+                    result = result.A - result.B;
+                } else if (operation == "*") {
+                    result.A = obj1["a"] * obj2["a"];
+                    result.B = obj1["b"] * obj2["b"];
+                    alert("Умножение значений объектов А = " + result.A + "   " + "Умножение значений объектов B = " + result.B);
+                    result = result.A * result.B;
+                } else if (operation == "/") {
+                    if (obj1['a'] == 0 || obj1['b'] == 0 || obj2['a'] == 0 || obj2['b'] == 0) {
+                        alert("Операция деления с числом 0 не разрешается.")
+                    } else {
+                        result.A = obj1["a"] / obj2["a"];
+                        result.B = obj1["b"] / obj2["b"];
+                        alert("Деление значений объектов А = " + result.A + "   " + "Деление значений объектов B = " + result.B);
+                        result = result.A / result.B;
+                    };
+                };
+                break;
+            };
+            return result;
+        }
+        alert(calculate());
+    </script>
+</body>
+
+</html>
