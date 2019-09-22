@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
 
+<body>
+    <script>
+        function calculate(arr1, arr2, operation) {
+            var arr1 = [4, 0, 6, 7, 12];
+            var arr2 = [8, 9, 10, 11];
+            var operation = prompt("Выберите арифметическое действие +, -, *, /", "+");
+            var result = [];
+            var length;
+
+            while (Array.isArray(arr1) && Array.isArray(arr2)) {
+
+                if (arr1.length >= arr2.length) {
+                    length = arr1.length;
+                } else {
+                    length = arr2.length;
+                };
+
+                if (operation == "+") {
+                    for (var i = 0; i < arr1.length; i++) {
+                        result.push(arr1[i] + arr2[i])
+                    }
+                    alert(result);
+
+                } else if (operation == "-") {
+                    for (var i = 0; i < arr1.length; i++) {
+                        result.push(arr1[i] - arr2[i])
+                    }
+                    alert(result);
+
+                } else if (operation == "*") {
+                    for (var i = 0; i < arr1.length; i++) {
+                        result.push(arr1[i] * arr2[i])
+                    }
+                    alert(result);
+                } else if (operation == "/") {
+                    for (var i = 0; i < arr1.length; i++) {
+                        if (arr1[i] != 0 && arr2[i] != 0) {
+                            result.push(arr1[i] / arr2[i])
+                        } else {
+                            alert("В числовом массиве присутствует 0. Операция деления с числом 0 не разрешается. Данная итерация пропускается без возвращения результата!");
+                        }
+                        alert(result);
+                    };
+                };
+                break;
+            };
+            return result;
+        };
+
+        alert(calculate());
+    </script>
 </body>
+
 </html>
