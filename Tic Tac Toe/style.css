@@ -1,0 +1,23 @@
+table {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border-collapse: collapse;
+    table-layout: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+}
+td {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+td:last-child {
+    border-right: 0;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
