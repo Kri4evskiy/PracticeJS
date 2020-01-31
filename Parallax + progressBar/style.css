@@ -1,0 +1,59 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+    color: rgb(35, 11, 53);
+    font-size: 48px;
+}
+
+.progress {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 4px;
+    background-color: rgb(204, 7, 7);
+}
+
+.parallax {
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 100vh;
+}
+.picture {
+    position: absolute;
+    left: -10%;
+    top: 0;
+    width: 110%;
+    height: 100%;
+    z-index: -1;
+}
+.picture-bg {
+    background: url('./dawn-190055_1280.jpg') no-repeat center;
+    background-size: cover;
+
+}
+
+.section-1 {
+    display: block;
+    height: 1000px;
+    background-color: cornsilk;
+
+}
